@@ -1,0 +1,35 @@
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "header" "main" "aside" "footer";
+}
+
+nav {
+    display: none;
+    background-color: yellow;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100vh;
+}
+
+
+main {
+    height: 80vh;
+}
+
+#clicked .on {
+    display: block;
+}
+#clicked .off {
+    display: none;
+}
+#clicked:target .on {
+    display: none;
+}
+#clicked:target .off {
+    display: block;
+}
+

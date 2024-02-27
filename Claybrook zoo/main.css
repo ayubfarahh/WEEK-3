@@ -9,6 +9,41 @@ nav {
     background-color: yellow;
     grid-area: nav;
 }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    
+}
+
+nav > ul > li {
+    position: relative;
+    width:100%;
+}
+
+nav ul ul {
+    position: absolute;
+    display: block;
+    background-color: green;
+    width: 100%;
+    padding: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in; /* will take 0.5 seconds to fade in */
+    pointer-events: none; /* Sub menus cannot be interacted with */
+}
+
+
+nav > ul > li:hover ul {
+    opacity: 1;
+    pointer-events: auto; /* Sub menus can be interacted with */
+}
+
+nav ul ul li:hover {
+    background-color: red;
+}
+
 main {
     background-color: darkblue;
     color: white;
